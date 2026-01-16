@@ -1474,16 +1474,52 @@ body.dark-mode .form-group textarea {
 @media (max-width: 900px) {
   .hero-modern {
     grid-template-columns: 1fr;
-    padding: 3rem;
+    padding: 6rem 3rem 3rem 3rem;
     text-align: center;
+    align-items: flex-start;
+    justify-items: center;
+    padding-top: max(6rem, 15vh);
+  }
+
+  .hero-left h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
   }
 
   .hero-right img {
     width: 300px;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .scroll-indicator {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-modern {
+    padding: max(5rem, 12vh) 2rem 2rem 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-modern {
+    padding: max(4rem, 10vh) 1.5rem 2rem 1.5rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-right img {
+    width: 250px;
+    margin-top: 1.5rem;
   }
 }
