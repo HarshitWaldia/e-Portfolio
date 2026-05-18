@@ -340,7 +340,7 @@ function initTypewriter() {
 // ==========================================================================
 // 7. 3D CARD MOUSE-TILT & SPOTLIGHT BORDER EFFECT
 // ==========================================================================
-const tiltCards = document.querySelectorAll('.project-card, .cert-card');
+const tiltCards = document.querySelectorAll('.project-card, .cert-card, .floating-card');
 
 tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
