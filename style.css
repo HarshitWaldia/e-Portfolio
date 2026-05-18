@@ -1170,9 +1170,15 @@ section {
     border-radius: 20px;
     padding: 1.5px;
     background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+    
+    /* WebKit Legacy / Safari Compatibility */
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    
+    /* Standard W3C Specifications */
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
+    
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.5s ease;
