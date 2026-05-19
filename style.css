@@ -1449,21 +1449,59 @@ section {
 }
 
 .cert-card {
-    background: var(--bg-card);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    perspective: 1000px;
+    height: 380px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cert-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cert-card.is-flipped .cert-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.cert-card-front, .cert-card-back {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
     border-radius: 20px;
     padding: 2.2rem 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s var(--ease-out-cubic);
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border: 1px solid var(--border-glass);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.cert-card::before {
+.cert-card-front {
+    background: var(--bg-card);
+}
+
+.cert-card-back {
+    background: var(--bg-card-hover);
+    transform: rotateY(180deg);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cert-card-front::before, .cert-card-back::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 3px;
@@ -1473,16 +1511,102 @@ section {
     transition: transform 0.5s var(--ease-elastic);
 }
 
-.cert-card:hover::before {
+.cert-card:hover .cert-card-front::before, 
+.cert-card:hover .cert-card-back::before {
     transform: scaleX(1);
 }
 
-.cert-card:hover {
-    transform: translateY(-8px);
+.cert-card:hover .cert-card-front {
     border-color: var(--border-glass-hover);
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), var(--glow-primary);
     background: var(--bg-card-hover);
+    transform: translateY(-8px);
 }
+
+.cert-card:hover .cert-card-back {
+    border-color: var(--border-glass-hover);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), var(--glow-secondary);
+    transform: translateY(-8px) rotateY(180deg);
+}
+
+/* Badge Layout inside Back Face */
+.badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+.badge-img {
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    transition: transform 0.5s var(--ease-out-cubic);
+}
+
+.cert-card:hover .badge-img {
+    transform: scale(1.08) translateZ(20px);
+}
+
+/* Flip hints */
+.flip-hint {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.cert-card:hover .flip-hint {
+    opacity: 0.85;
+}
+
+/* Generic seal styling for courses */
+.generic-course-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transform-style: preserve-3d;
+}
+
+.generic-badge-seal {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(6, 182, 212, 0.03) 100%);
+    border: 2px solid rgba(6, 182, 212, 0.3);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    transition: transform 0.5s var(--ease-out-cubic);
+}
+
+.cert-card:hover .generic-badge-seal {
+    transform: scale(1.08) translateZ(20px);
+}
+
+.generic-course-badge h4 {
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.generic-course-badge p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 
 .cert-icon {
     font-size: 2.8rem;
