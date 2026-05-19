@@ -1549,6 +1549,60 @@ section {
     transform: translateY(-1px);
 }
 
+/* 3D Glassmorphic Badge */
+.cert-type-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateZ(25px);
+    pointer-events: none;
+}
+
+/* Certification styling */
+.cert-type-badge.certification {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(234, 179, 8, 0.05) 100%);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    color: #facc15 !important;
+    text-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        0 4px 10px rgba(234, 179, 8, 0.15);
+}
+
+.cert-card:hover .cert-type-badge.certification {
+    transform: translateZ(35px) scale(1.05);
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.4),
+        0 8px 20px rgba(234, 179, 8, 0.35);
+}
+
+/* Course styling */
+.cert-type-badge.course {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.05) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: var(--color-secondary) !important;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        0 4px 10px rgba(6, 182, 212, 0.15);
+}
+
+.cert-card:hover .cert-type-badge.course {
+    transform: translateZ(35px) scale(1.05);
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.4),
+        0 8px 20px rgba(6, 182, 212, 0.35);
+}
+
 /* ==========================================================================
    RESUME DOWNLOAD DECK
    ========================================================================== */
