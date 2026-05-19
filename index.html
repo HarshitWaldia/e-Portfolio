@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,848 +10,952 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dark-mode"> <!-- Default to Dark Mode for Premium Cinematic Aesthetic -->
 
-<!-- Custom Interactive Cursor Elements -->
-<div class="custom-cursor-dot" id="cursor-dot"></div>
-<div class="custom-cursor-ring" id="cursor-ring"></div>
+    <!-- Custom Interactive Cursor Elements -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-ring" id="cursor-ring"></div>
 
-<!-- Futuristic Preloader Command Line Diagnostic Sequence -->
-<div id="preloader" class="preloader">
-    <div class="terminal-loader">
-        <div class="terminal-header">
-            <div class="terminal-dots">
+    <!-- Futuristic Preloader Command Line Diagnostic Sequence -->
+    <div id="preloader" class="preloader">
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="terminal-title">harshit_waldia_os.sh</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <!-- Dynamically populated console diagnostic log lines -->
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- High-Tech Background Layers -->
+    <div class="cyber-grid-overlay"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="glow-blob blob-3"></div>
+
+    <!-- Fixed Navigation Bar Pill -->
+    <header id="navbar-header">
+        <nav class="navbar">
+            <a href="#hero" class="logo">HW</a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link-item active">Home</a></li>
+                <li><a href="#about" class="nav-link-item">About</a></li>
+                <li><a href="#skills" class="nav-link-item">Skills</a></li>
+                <li><a href="#projects" class="nav-link-item">Projects</a></li>
+                <li><a href="#experience" class="nav-link-item">Experience</a></li>
+                <li><a href="#certifications" class="nav-link-item">Certifications</a></li>
+                <li><a href="#resume" class="nav-link-item">Resume</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" checked>
+                <label for="theme-switch" class="toggle-label"></label>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
                 <span></span><span></span><span></span>
             </div>
-            <div class="terminal-title">harshit_waldia_os.sh</div>
-        </div>
-        <div class="terminal-body" id="terminal-body">
-            <!-- Dynamically populated console diagnostic log lines -->
-        </div>
-        <div class="progress-bar-container">
-            <div class="progress-bar-fill" id="progress-bar-fill"></div>
-        </div>
-    </div>
-</div>
+        </nav>
+    </header>
 
-<!-- High-Tech Background Layers -->
-<div class="cyber-grid-overlay"></div>
-<div class="cursor-glow" id="cursor-glow"></div>
-<div class="glow-blob blob-1"></div>
-<div class="glow-blob blob-2"></div>
-<div class="glow-blob blob-3"></div>
+    <main>
+        <!-- Cinematic Hero Section -->
+        <section id="hero" class="hero-modern">
+            <!-- Particle Starfield Mesh -->
+            <canvas id="starfield-canvas"></canvas>
 
-<!-- Fixed Navigation Bar Pill -->
-<header id="navbar-header">
-    <nav class="navbar">
-        <a href="#hero" class="logo">HW</a>
-        <ul class="nav-links">
-            <li><a href="#hero" class="nav-link-item active">Home</a></li>
-            <li><a href="#about" class="nav-link-item">About</a></li>
-            <li><a href="#skills" class="nav-link-item">Skills</a></li>
-            <li><a href="#projects" class="nav-link-item">Projects</a></li>
-            <li><a href="#experience" class="nav-link-item">Experience</a></li>
-            <li><a href="#certifications" class="nav-link-item">Certifications</a></li>
-            <li><a href="#resume" class="nav-link-item">Resume</a></li>
-            <li><a href="#contact" class="nav-link-item">Contact</a></li>
-        </ul>
-        <div class="theme-toggle">
-            <input type="checkbox" id="theme-switch" checked>
-            <label for="theme-switch" class="toggle-label"></label>
-        </div>
-        <div class="hamburger" id="hamburger-menu">
-            <span></span><span></span><span></span>
-        </div>
-    </nav>
-</header>
+            <div class="hero-left">
+                <div class="hero-tag">System: AI/ML Engineering Core Active</div>
+                <h1 class="hero-title-animated">
+                    Hi, I'm <br />
+                    <span class="accent-text">Harshit Waldia</span>
+                </h1>
 
-<main>
-    <!-- Cinematic Hero Section -->
-    <section id="hero" class="hero-modern">
-        <!-- Particle Starfield Mesh -->
-        <canvas id="starfield-canvas"></canvas>
+                <p class="hero-role">
+                    <span>Building intelligent, autonomous systems as an</span>
+                    <span class="role-highlight" id="role-text">AI & Machine Learning Engineer</span>
+                </p>
 
-        <div class="hero-left">
-            <div class="hero-tag">System: AI/ML Engineering Core Active</div>
-            <h1 class="hero-title-animated">
-                Hi, I'm <br />
-                <span class="accent-text">Harshit Waldia</span>
-            </h1>
-
-            <p class="hero-role">
-                <span>Building intelligent, autonomous systems as an</span>
-                <span class="role-highlight" id="role-text">AI & Machine Learning Engineer</span>
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span>Deploy Projects</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <span>Establish Link</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-right">
-            <!-- Holographic Interactive AI Core HUD Panel -->
-            <div class="floating-card" id="hero-hud">
-                <div class="hud-ring hud-ring-1"></div>
-                <div class="hud-ring hud-ring-2"></div>
-                <div class="hud-ring hud-ring-3"></div>
-                <div class="hud-brackets"></div>
-                <div class="hud-core">
-                    <img src="assets/emo.gif" alt="EMO AI Core" class="hero-image" />
-                </div>
-            </div>
-        </div>
-
-        <!-- High-Tech Scroll Down Indicator -->
-        <a href="#about" class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Diagnostics</span>
-        </a>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title reveal-item">About Me</h2>
-            <div class="about-content">
-                <div class="about-image reveal-item">
-                    <div class="profile-border-glow"></div>
-                    <img src="assets/imgt.jpg" loading="lazy" alt="Harshit Waldia" class="profile-pic">     
-                </div>
-                <div class="about-info reveal-item">
-                    <h2 class="about-name">Harshit Waldia</h2>
-                    <p class="about-title">AI & Machine Learning Engineer | CSE Graduate</p>
-                    
-                    <p class="about-bio">
-                        I'm a Computer Science graduate specializing in AI & Machine Learning, highly skilled in data structures, deep learning, computer vision, and natural language processing. I design and build production-grade intelligent pipelines and backends. Experienced in research and developing APIs, I am proficient in Python, SQL/NoSQL databases, Git, and robust frameworks like Django, Flask, and FastAPI. I am a dedicated, fast learner motivated to architect clean, performant code.
-                    </p>
-
-                    <div class="about-social">
-                        <a href="https://www.linkedin.com/in/harshit-waldia" target="_blank" class="social-icon" title="LinkedIn">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.3v8.37h2.3v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.3M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/HarshitWaldia" target="_blank" class="social-icon" title="GitHub">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.891 1.529 2.341 1.544 2.914 1.186.092-.923.349-1.543.635-1.897-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.4 22 12c0-5.52-4.48-10-10-10z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:harshitwaldia112@gmail.com" class="social-icon" title="Email">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills & Tech Stack Section -->
-    <section id="skills" class="skills-cards">
-        <div class="container">
-            <h2 class="section-title reveal-item">Skills & Tech Stack</h2>
-
-            <div class="cards-grid">
-                <!-- Languages -->
-                <div class="skill-card reveal-item">
-                    <h3>Languages</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
-                        <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
-                        <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
-                        <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                        <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-                    </div>
-                </div>
-
-                <!-- AI / ML -->
-                <div class="skill-card reveal-item">
-                    <h3>AI & Machine Learning</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
-                        <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
-                        <img src="https://img.shields.io/badge/OpenCV-%232d7e90.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
-                        <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
-                    </div>
-                </div>
-
-                <!-- Web -->
-                <div class="skill-card reveal-item">
-                    <h3>Web & Backend</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-                        <img src="https://img.shields.io/badge/Django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-                        <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-                        <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-                    </div>
-                </div>
-
-                <!-- Database -->
-                <div class="skill-card reveal-item">
-                    <h3>Databases</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-                        <img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-                    </div>
-                </div>
-
-                <!-- Cloud -->
-                <div class="skill-card reveal-item">
-                    <h3>Cloud & DevOps</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
-                        <img src="https://img.shields.io/badge/Azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure">
-                        <img src="https://img.shields.io/badge/Oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
-                    </div>
-                </div>
-
-                <!-- Tools -->
-                <div class="skill-card reveal-item">
-                    <h3>Version Control & Tools</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                        <img src="https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-                        <img src="https://img.shields.io/badge/IntelliJ_IDEA-%23000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" alt="IntelliJ">
-                    </div>
-                </div>
-                
-                <!-- IDEs -->
-                <div class="skill-card reveal-item">
-                    <h3>IDEs & Notebooks</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white" alt="Anaconda">
-                        <img src="https://img.shields.io/badge/Colab-%23F9AB00.svg?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Google Colab">
-                        <img src="https://img.shields.io/badge/VSCode-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code"> 
-                        <img src="https://img.shields.io/badge/Jupyter-%23F37626.svg?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
-                    </div>
-                </div>
-
-                <!-- OS -->
-                <div class="skill-card reveal-item">
-                    <h3>Operating Systems</h3>
-                    <div class="badge-group">
-                        <img src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
-                        <img src="https://img.shields.io/badge/Windows-%230078D6.svg?style=for-the-badge&logo=windows&logoColor=white" alt="Windows">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title reveal-item">Featured Projects</h2>
-            
-            <!-- Dynamic High-Tech Filter Pill Buttons -->
-            <div class="filter-buttons reveal-item">
-                <button class="filter-btn active" data-filter="all">All Systems</button>
-                <button class="filter-btn" data-filter="agent">AI Agents</button>
-                <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                <button class="filter-btn" data-filter="backend">Backend APIs</button>
-                <button class="filter-btn" data-filter="generative">Generative AI</button>
-            </div>
-
-            <!-- Dynamic Projects Grid -->
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">🧠</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>EmotionalAI</h3>
-                        <p>
-                            A facial expression analysis and emotion recognition system that leverages advanced computer vision and convolutional models to identify emotional states.
-                        </p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Face_Emotion_Recognition" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-category="generative">
-                    <div class="project-image">
-                        <span class="project-icon">💬</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>DocTalk</h3>
-                        <p>
-                            An LLM-orchestrated PDF retrieval bot that permits secure natural language conversation with uploaded documents using dense vector databases.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LLM</span>
-                            <span>Vector Search</span>
-                            <span>Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/DocTalk-llm-Powered-PDF-Chatbot" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" data-category="agent">
-                    <div class="project-image">
-                        <span class="project-icon">🤖</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Agentic SEO Ranking System</h3>
-                        <p>
-                            An autonomous SEO analyzer powered by LangGraph agents that queries Google Search APIs, grades organic rankings, and proposes programmatic improvements.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LangGraph</span>
-                            <span>SerpAPI</span>
-                            <span>Groq</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Agentic-SEO-Ranking-System" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-category="agent">
-                    <div class="project-image">
-                        <span class="project-icon">📊</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>WebTraffic Analysis Agent</h3>
-                        <p>
-                            Multi-agentic business system mapping GA4 tracking points, validating data feeds, generating automated reports, and providing contextual analytics insights.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LangGraph</span>
-                            <span>Groq API</span>
-                            <span>GA4 API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/WebTraffic-Analysis-Agent" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-category="agent">
-                    <div class="project-image">
-                        <span class="project-icon">🎯</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Prompt Failure Diagnosis Agent</h3>
-                        <p>
-                            An diagnostic system running evaluation loops to pinpoint vulnerabilities in prompt structures, proposing optimized versions via an interactive GUI.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LangGraph</span>
-                            <span>Gradio</span>
-                            <span>Groq</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/AI-Prompt-Failure-Diagnosis-Agent" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">🚗</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>TrafficTally</h3>
-                        <p>
-                            A neural vehicle detection and classification system running OpenCV loops on street feeds to count traffic flows, enhancing road management.
-                        </p>
-                        <div class="tech-stack">
-                            <span>OpenCV</span>
-                            <span>Computer Vision</span>
-                            <span>Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/TrafficTally" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">🏥</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Disease Detection Engine</h3>
-                        <p>
-                            Predictive healthcare application implementing Random Forest ensembles to accurately diagnose patient pathologies based on symptomatic arrays.
-                        </p>
-                        <div class="tech-stack">
-                            <span>Scikit-learn</span>
-                            <span>Tkinter</span>
-                            <span>Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Disease_Detection" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="project-card" data-category="backend">
-                    <div class="project-image">
-                        <span class="project-icon">🛒</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>FastAPI E-commerce RBAC</h3>
-                        <p>
-                            High-speed transactional e-commerce backend built with FastAPI, implementing secure Role-Based Access Control and strict database migrations.
-                        </p>
-                        <div class="tech-stack">
-                            <span>FastAPI</span>
-                            <span>PostgreSQL</span>
-                            <span>JWT RBAC</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/FastAPI-RBAC-Microservice" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 9 -->
-                <div class="project-card" data-category="backend">
-                    <div class="project-image">
-                        <span class="project-icon">⚙️</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>FastAPI-Postgres CRUD</h3>
-                        <p>
-                            Production boilerplate orchestrating relational data schemas in PostgreSQL with SQLAlchemy models, migrations, and schema validation.
-                        </p>
-                        <div class="tech-stack">
-                            <span>FastAPI</span>
-                            <span>SQLAlchemy</span>
-                            <span>Alembic</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/FastAPI-Postgres-CRUD" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 10 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">💰</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>LoanSenseAI</h3>
-                        <p>
-                            Risk forecasting matrix mapping financial histories via XGBoost to detect default probabilities, protecting institutional capitals.
-                        </p>
-                        <div class="tech-stack">
-                            <span>XGBoost</span>
-                            <span>Scikit-learn</span>
-                            <span>EDA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/LoanSenseAI" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 11 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">📈</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Stock Price Prediction</h3>
-                        <p>
-                            Time-series modeling pipeline training LSTM recurrent layers to forecast next-day values, mounted on a web visualization interface.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LSTM Neural Net</span>
-                            <span>Flask</span>
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Stock-Price-Prediction" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 12 -->
-                <div class="project-card" data-category="agent">
-                    <div class="project-image">
-                        <span class="project-icon">🌦️</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Weather Recommendation Agent</h3>
-                        <p>
-                            An AI travel assistant querying live meteorological arrays and formulating custom localized recommendations using reasoning LLM agents.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LangGraph</span>
-                            <span>Groq API</span>
-                            <span>Gradio</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Weather-Based-Recommendation-Agent-using-Agentic-AI" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 13 -->
-                <div class="project-card" data-category="agent">
-                    <div class="project-image">
-                        <span class="project-icon">🔍</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Autonomous Market Research Agent</h3>
-                        <p>
-                            Multi-tiered scraper and researcher agent that processes market data, structures competitive evaluations, and drafts strategic reports.
-                        </p>
-                        <div class="tech-stack">
-                            <span>LangGraph</span>
-                            <span>Groq API</span>
-                            <span>LangChain</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Autonomous-Market-Research-Agent" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 14 -->
-                <div class="project-card" data-category="generative">
-                    <div class="project-image">
-                        <span class="project-icon">🎨</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>SynthiVerse</h3>
-                        <p>
-                            A generative pipeline linking diffusion models to synthesis networks, compiling descriptive prompts into detailed images, audio, and visual nodes.
-                        </p>
-                        <div class="tech-stack">
-                            <span>Stable Diffusion</span>
-                            <span>Generative AI</span>
-                            <span>Diffusers</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/SynthiVerse" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 15 -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-image">
-                        <span class="project-icon">📊</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Predictive Analytics Solutions</h3>
-                        <p>
-                            Comprehensive modeling suites tracking manufacturing plant metrics and conversion loops, mapping correlations with advanced regressions.
-                        </p>
-                        <div class="tech-stack">
-                            <span>Supervised Learning</span>
-                            <span>Pandas</span>
-                            <span>Feature Prep</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/HarshitWaldia/Predictive-Analytics-Solutions" target="_blank" class="project-link">View Repository →</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title reveal-item">Professional Experience</h2>
-            
-            <div class="timeline">
-                <!-- Laser Timeline Progress line -->
-                <div class="timeline-progress-laser" id="timeline-laser"></div>
-
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item reveal-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>AI Research Intern</h3>
-                        <p class="company">Renix Informatics</p>
-                        <p class="date">Nov 2024 – Feb 2025</p>
-                        <p>
-                            Assisted research teams in modeling AI structures, building dense neural layers, parsing large training files, validating inference boundaries, and documenting experimental benchmarks.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item reveal-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Robotics Intern</h3>
-                        <p class="company">SPACE – Scientific Platforms And Cosmic Explorations</p>
-                        <p class="date">Apr 2023 – May 2023</p>
-                        <p>
-                            Engaged with hardware architectures and microprocessor layouts, programming robotic control commands and managing diagnostic procedures.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title reveal-item">Academic Journey</h2>
-            
-            <div class="timeline">
-                <div class="timeline-progress-laser" id="education-laser"></div>
-
-                <div class="timeline-item reveal-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>B.Tech (Hons) – CSE (AI & ML)</h3>
-                        <p class="company">Graphic Era Hill University</p>
-                        <p class="date">2021 – 2025</p>
-                        <p>
-                            Graduated with specialization in Artificial Intelligence and Machine Learning. Curriculums focused on math, deep neural setups, transformer layers, computer vision grids, and database systems.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2 class="section-title reveal-item">Certifications & Credentials</h2>
-            <div class="cert-grid">
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🏅</span>
-                    <h3>LangChain & LangGraph Mastery</h3>
-                    <p class="cert-issuer">DeepLearning.AI</p>
-                    <p class="cert-description">Architecting advanced agentic loops, cyclic pipelines, memory managers, and conversational models with LangChain/LangGraph.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge">In Progress</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🤖</span>
-                    <h3>Generative AI & LLMs</h3>
-                    <p class="cert-issuer">DeepLearning.AI</p>
-                    <p class="cert-description">Optimizing deep transformer prompting, structuring contextual prompts, and building LLM vector pipelines.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🧠</span>
-                    <h3>Machine Learning Specialization</h3>
-                    <p class="cert-issuer">Coursera - Andrew Ng</p>
-                    <p class="cert-description">In-depth statistical models covering cost regressions, logical categorizations, vector splits, and unsupervised clustering algorithms.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🧠</span>
-                    <h3>Deep Learning Specialization</h3>
-                    <p class="cert-issuer">Coursera - Andrew Ng</p>
-                    <p class="cert-description">Configuring feed-forward neural layers, recurrent sequence models, CNNs, regularization loops, and tuning hyper-variables.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🖼️</span>
-                    <h3>Computer Vision with OpenCV</h3>
-                    <p class="cert-issuer">Udemy</p>
-                    <p class="cert-description">Executing pixel arrays, threshold manipulations, image filters, contour groupings, and training custom object detectors.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🔍</span>
-                    <h3>Natural Language Processing</h3>
-                    <p class="cert-issuer">Fast.ai</p>
-                    <p class="cert-description">Processing token sets, word vector models, classification embeddings, and mounting text classifiers.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🗄️</span>
-                    <h3>SQL & Database Design</h3>
-                    <p class="cert-issuer">Udemy</p>
-                    <p class="cert-description">Orchestrating index architectures, compiling relational joins, designing entity splits, and scaling queries.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal-item">
-                    <span class="cert-icon">🚀</span>
-                    <h3>FastAPI Web Development</h3>
-                    <p class="cert-issuer">Udemy</p>
-                    <p class="cert-description">Developing high-speed async APIs in FastAPI, setting schema validators, securing JWT, and routing database dependencies.</p>
-                    <div class="cert-meta">
-                        <span class="cert-badge completed">Completed</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Deck Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <h2 class="section-title reveal-item">Professional Resume</h2>
-            <div class="resume-content reveal-item">
-                <div class="resume-preview">
-                    <div class="resume-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
-                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z"/>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Deploy Projects</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
-                    </div>
-                    <h3>Harshit Waldia</h3>
-                    <p class="resume-subtitle">AI & Machine Learning Engineer</p>
-                    <p class="resume-description">
-                        Download my comprehensive CV file mapping academic achievements, research publications, tech stack scores, and engineering experience.
-                    </p>
-                    <div class="resume-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🎓</span>
-                            <span>B.Tech in AI & ML</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">💼</span>
-                            <span>Internship Roles</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🏅</span>
-                            <span>8+ Credentials</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🚀</span>
-                            <span>15+ Solutions</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-actions">
-                    <a href="assets/Resume_Harshit_Waldia%20(1).pdf" download class="btn btn-primary btn-download">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
-                        </svg>
-                        <span>Download PDF Resume</span>
                     </a>
-                    <a href="assets/Resume_Harshit_Waldia%20(1).pdf" target="_blank" class="btn btn-outline btn-download">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Establish Link</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
-                        <span>View Resume Online</span>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Interactive Get In Touch Terminal Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title reveal-item">Establish Communications</h2>
-            <div class="contact-content">
-                <div class="contact-info reveal-item">
-                    <p>
-                        Let’s collaborate on machine learning integrations, computer vision systems, or robust API backend designs. Open to research, consulting, and development roles.
-                    </p>
-                    
-                    <div class="contact-details-box">
-                        <div class="contact-detail-item">
-                            <div class="contact-detail-icon">✉️</div>
-                            <div class="contact-detail-text">
-                                <h4>Core Mailpoint</h4>
-                                <p>harshitwaldia112@gmail.com</p>
+            <div class="hero-right">
+                <!-- Holographic Interactive AI Core HUD Panel -->
+                <div class="floating-card" id="hero-hud">
+                    <div class="hud-ring hud-ring-1"></div>
+                    <div class="hud-ring hud-ring-2"></div>
+                    <div class="hud-ring hud-ring-3"></div>
+                    <div class="hud-brackets"></div>
+                    <div class="hud-core">
+                        <img src="assets/emo.gif" alt="EMO AI Core" class="hero-image" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- High-Tech Scroll Down Indicator -->
+            <a href="#about" class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Diagnostics</span>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title reveal-item">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image reveal-item">
+                        <div class="profile-border-glow"></div>
+                        <img src="assets/imgt.jpg" loading="lazy" alt="Harshit Waldia" class="profile-pic">
+                    </div>
+                    <div class="about-info reveal-item">
+                        <h2 class="about-name">Harshit Waldia</h2>
+                        <p class="about-title">AI & Machine Learning Engineer | CSE Graduate</p>
+
+                        <p class="about-bio">
+                            I'm a Computer Science graduate specializing in AI & Machine Learning, highly skilled in
+                            data structures, deep learning, computer vision, and natural language processing. I design
+                            and build production-grade intelligent pipelines and backends. Experienced in research and
+                            developing APIs, I am proficient in Python, SQL/NoSQL databases, Git, and robust frameworks
+                            like Django, Flask, and FastAPI. I am a dedicated, fast learner motivated to architect
+                            clean, performant code.
+                        </p>
+
+                        <div class="about-social">
+                            <a href="https://www.linkedin.com/in/harshit-waldia" target="_blank" class="social-icon"
+                                title="LinkedIn">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.3v8.37h2.3v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.3M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/HarshitWaldia" target="_blank" class="social-icon"
+                                title="GitHub">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.891 1.529 2.341 1.544 2.914 1.186.092-.923.349-1.543.635-1.897-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.4 22 12c0-5.52-4.48-10-10-10z" />
+                                </svg>
+                            </a>
+                            <a href="mailto:harshitwaldia112@gmail.com" class="social-icon" title="Email">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tech Stack Section -->
+        <section id="skills" class="skills-cards">
+            <div class="container">
+                <h2 class="section-title reveal-item">Skills & Tech Stack</h2>
+
+                <div class="cards-grid">
+                    <!-- Languages -->
+                    <div class="skill-card reveal-item">
+                        <h3>Languages</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
+                                alt="C">
+                            <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                                alt="C++">
+                            <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+                                alt="Java">
+                            <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white"
+                                alt="Python">
+                            <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black"
+                                alt="JavaScript">
+                        </div>
+                    </div>
+
+                    <!-- AI / ML -->
+                    <div class="skill-card reveal-item">
+                        <h3>AI & Machine Learning</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white"
+                                alt="TensorFlow">
+                            <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white"
+                                alt="PyTorch">
+                            <img src="https://img.shields.io/badge/OpenCV-%232d7e90.svg?style=for-the-badge&logo=opencv&logoColor=white"
+                                alt="OpenCV">
+                            <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"
+                                alt="scikit-learn">
+                        </div>
+                    </div>
+
+                    <!-- Web -->
+                    <div class="skill-card reveal-item">
+                        <h3>Web & Backend</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+                                alt="Flask">
+                            <img src="https://img.shields.io/badge/Django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+                                alt="Django">
+                            <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                                alt="HTML">
+                            <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+                                alt="CSS">
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skill-card reveal-item">
+                        <h3>Databases</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white"
+                                alt="MySQL">
+                            <img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+                                alt="PostgreSQL">
+                        </div>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="skill-card reveal-item">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"
+                                alt="AWS">
+                            <img src="https://img.shields.io/badge/Azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white"
+                                alt="Azure">
+                            <img src="https://img.shields.io/badge/Oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white"
+                                alt="Oracle">
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-card reveal-item">
+                        <h3>Version Control & Tools</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white"
+                                alt="Git">
+                            <img src="https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white"
+                                alt="GitHub">
+                            <img src="https://img.shields.io/badge/IntelliJ_IDEA-%23000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"
+                                alt="IntelliJ">
+                        </div>
+                    </div>
+
+                    <!-- IDEs -->
+                    <div class="skill-card reveal-item">
+                        <h3>IDEs & Notebooks</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white"
+                                alt="Anaconda">
+                            <img src="https://img.shields.io/badge/Colab-%23F9AB00.svg?style=for-the-badge&logo=googlecolab&logoColor=white"
+                                alt="Google Colab">
+                            <img src="https://img.shields.io/badge/VSCode-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"
+                                alt="VS Code">
+                            <img src="https://img.shields.io/badge/Jupyter-%23F37626.svg?style=for-the-badge&logo=jupyter&logoColor=white"
+                                alt="Jupyter">
+                        </div>
+                    </div>
+
+                    <!-- OS -->
+                    <div class="skill-card reveal-item">
+                        <h3>Operating Systems</h3>
+                        <div class="badge-group">
+                            <img src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black"
+                                alt="Linux">
+                            <img src="https://img.shields.io/badge/Windows-%230078D6.svg?style=for-the-badge&logo=windows&logoColor=white"
+                                alt="Windows">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title reveal-item">Featured Projects</h2>
+
+                <!-- Dynamic High-Tech Filter Pill Buttons -->
+                <div class="filter-buttons reveal-item">
+                    <button class="filter-btn active" data-filter="all">All Systems</button>
+                    <button class="filter-btn" data-filter="agent">AI Agents</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                    <button class="filter-btn" data-filter="backend">Backend APIs</button>
+                    <button class="filter-btn" data-filter="generative">Generative AI</button>
+                </div>
+
+                <!-- Dynamic Projects Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Face_Emotion_Recognition.png" alt="EmotionalAI"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>EmotionalAI</h3>
+                            <p>
+                                A facial expression analysis and emotion recognition system that leverages advanced
+                                computer vision and convolutional models to identify emotional states.
+                            </p>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>TensorFlow</span>
                             </div>
-                        </div>
-                        <div class="contact-detail-item">
-                            <div class="contact-detail-icon">📍</div>
-                            <div class="contact-detail-text">
-                                <h4>Geo Coordinates</h4>
-                                <p>Uttarakhand, India</p>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Face_Emotion_Recognition" target="_blank"
+                                    class="project-link">View Repository →</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/harshit-waldia" target="_blank" class="social-link">
-                            <span>Connect LinkedIn</span>
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="generative">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Doc_Talk.png" alt="DocTalk" class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>DocTalk</h3>
+                            <p>
+                                An LLM-orchestrated PDF retrieval bot that permits secure natural language conversation
+                                with uploaded documents using dense vector databases.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LLM</span>
+                                <span>Vector Search</span>
+                                <span>Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/DocTalk-llm-Powered-PDF-Chatbot"
+                                    target="_blank" class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="agent">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Agentic_SEO_Ranking(1).png" alt="Agentic SEO Ranking System"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>Agentic SEO Ranking System</h3>
+                            <p>
+                                An autonomous SEO analyzer powered by LangGraph agents that queries Google Search APIs,
+                                grades organic rankings, and proposes programmatic improvements.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LangGraph</span>
+                                <span>SerpAPI</span>
+                                <span>Groq</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Agentic-SEO-Ranking-System" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="agent">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Web_Traffic_Analysis.png" alt="WebTraffic Analysis Agent"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>WebTraffic Analysis Agent</h3>
+                            <p>
+                                Multi-agentic business system mapping GA4 tracking points, validating data feeds,
+                                generating automated reports, and providing contextual analytics insights.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LangGraph</span>
+                                <span>Groq API</span>
+                                <span>GA4 API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/WebTraffic-Analysis-Agent" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="agent">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/AI_prompt_Failure(2).png"
+                                alt="AI Prompt Failure Diagnosis Agent" class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Prompt Failure Diagnosis Agent</h3>
+                            <p>
+                                An diagnostic system running evaluation loops to pinpoint vulnerabilities in prompt
+                                structures, proposing optimized versions via an interactive GUI.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LangGraph</span>
+                                <span>Gradio</span>
+                                <span>Groq</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/AI-Prompt-Failure-Diagnosis-Agent"
+                                    target="_blank" class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Traffic_Tally.jpg" alt="TrafficTally"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>TrafficTally</h3>
+                            <p>
+                                A neural vehicle detection and classification system running OpenCV loops on street
+                                feeds to count traffic flows, enhancing road management.
+                            </p>
+                            <div class="tech-stack">
+                                <span>OpenCV</span>
+                                <span>Computer Vision</span>
+                                <span>Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/TrafficTally" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <span class="project-icon">🏥</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Disease Detection Engine</h3>
+                            <p>
+                                Predictive healthcare application implementing Random Forest ensembles to accurately
+                                diagnose patient pathologies based on symptomatic arrays.
+                            </p>
+                            <div class="tech-stack">
+                                <span>Scikit-learn</span>
+                                <span>Tkinter</span>
+                                <span>Pandas</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Disease_Detection" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card" data-category="backend">
+                        <div class="project-image">
+                            <span class="project-icon">🛒</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>FastAPI E-commerce RBAC</h3>
+                            <p>
+                                High-speed transactional e-commerce backend built with FastAPI, implementing secure
+                                Role-Based Access Control and strict database migrations.
+                            </p>
+                            <div class="tech-stack">
+                                <span>FastAPI</span>
+                                <span>PostgreSQL</span>
+                                <span>JWT RBAC</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/FastAPI-RBAC-Microservice" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card" data-category="backend">
+                        <div class="project-image">
+                            <span class="project-icon">⚙️</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>FastAPI-Postgres CRUD</h3>
+                            <p>
+                                Production boilerplate orchestrating relational data schemas in PostgreSQL with
+                                SQLAlchemy models, migrations, and schema validation.
+                            </p>
+                            <div class="tech-stack">
+                                <span>FastAPI</span>
+                                <span>SQLAlchemy</span>
+                                <span>Alembic</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/FastAPI-Postgres-CRUD" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Loan_SenseAI.png" alt="LoanSenseAI"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>LoanSenseAI</h3>
+                            <p>
+                                Risk forecasting matrix mapping financial histories via XGBoost to detect default
+                                probabilities, protecting institutional capitals.
+                            </p>
+                            <div class="tech-stack">
+                                <span>XGBoost</span>
+                                <span>Scikit-learn</span>
+                                <span>EDA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/LoanSenseAI" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/Stock_Price_Prediction.png" alt="Stock Price Prediction"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>Stock Price Prediction</h3>
+                            <p>
+                                Time-series modeling pipeline training LSTM recurrent layers to forecast next-day
+                                values, mounted on a web visualization interface.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LSTM Neural Net</span>
+                                <span>Flask</span>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Stock-Price-Prediction" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="project-card" data-category="agent">
+                        <div class="project-image">
+                            <span class="project-icon">🌦️</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Recommendation Agent</h3>
+                            <p>
+                                An AI travel assistant querying live meteorological arrays and formulating custom
+                                localized recommendations using reasoning LLM agents.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LangGraph</span>
+                                <span>Groq API</span>
+                                <span>Gradio</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Weather-Based-Recommendation-Agent-using-Agentic-AI"
+                                    target="_blank" class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 13 -->
+                    <div class="project-card" data-category="agent">
+                        <div class="project-image">
+                            <span class="project-icon">🔍</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Autonomous Market Research Agent</h3>
+                            <p>
+                                Multi-tiered scraper and researcher agent that processes market data, structures
+                                competitive evaluations, and drafts strategic reports.
+                            </p>
+                            <div class="tech-stack">
+                                <span>LangGraph</span>
+                                <span>Groq API</span>
+                                <span>LangChain</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Autonomous-Market-Research-Agent"
+                                    target="_blank" class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 14 -->
+                    <div class="project-card" data-category="generative">
+                        <div class="project-image">
+                            <img src="assets/Project_Pics/SynthiVerse.ai.png" alt="SynthiVerse"
+                                class="project-card-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>SynthiVerse</h3>
+                            <p>
+                                A generative pipeline linking diffusion models to synthesis networks, compiling
+                                descriptive prompts into detailed images, audio, and visual nodes.
+                            </p>
+                            <div class="tech-stack">
+                                <span>Stable Diffusion</span>
+                                <span>Generative AI</span>
+                                <span>Diffusers</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/SynthiVerse" target="_blank"
+                                    class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 15 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-image">
+                            <span class="project-icon">📊</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Predictive Analytics Solutions</h3>
+                            <p>
+                                Comprehensive modeling suites tracking manufacturing plant metrics and conversion loops,
+                                mapping correlations with advanced regressions.
+                            </p>
+                            <div class="tech-stack">
+                                <span>Supervised Learning</span>
+                                <span>Pandas</span>
+                                <span>Feature Prep</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HarshitWaldia/Predictive-Analytics-Solutions"
+                                    target="_blank" class="project-link">View Repository →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title reveal-item">Professional Experience</h2>
+
+                <div class="timeline">
+                    <!-- Laser Timeline Progress line -->
+                    <div class="timeline-progress-laser" id="timeline-laser"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>AI Research Intern</h3>
+                            <p class="company">Renix Informatics</p>
+                            <p class="date">Nov 2024 – Feb 2025</p>
+                            <p>
+                                Assisted research teams in modeling AI structures, building dense neural layers, parsing
+                                large training files, validating inference boundaries, and documenting experimental
+                                benchmarks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Robotics Intern</h3>
+                            <p class="company">SPACE – Scientific Platforms And Cosmic Explorations</p>
+                            <p class="date">Apr 2023 – May 2023</p>
+                            <p>
+                                Engaged with hardware architectures and microprocessor layouts, programming robotic
+                                control commands and managing diagnostic procedures.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2 class="section-title reveal-item">Academic Journey</h2>
+
+                <div class="timeline">
+                    <div class="timeline-progress-laser" id="education-laser"></div>
+
+                    <div class="timeline-item reveal-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech (Hons) – CSE (AI & ML)</h3>
+                            <p class="company">Graphic Era Hill University</p>
+                            <p class="date">2021 – 2025</p>
+                            <p>
+                                Graduated with specialization in Artificial Intelligence and Machine Learning.
+                                Curriculums focused on math, deep neural setups, transformer layers, computer vision
+                                grids, and database systems.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title reveal-item">Certifications & Credentials</h2>
+                <div class="cert-grid">
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🏅</span>
+                        <h3>LangChain & LangGraph Mastery</h3>
+                        <p class="cert-issuer">DeepLearning.AI</p>
+                        <p class="cert-description">Architecting advanced agentic loops, cyclic pipelines, memory
+                            managers, and conversational models with LangChain/LangGraph.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge">In Progress</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🤖</span>
+                        <h3>Generative AI & LLMs</h3>
+                        <p class="cert-issuer">DeepLearning.AI</p>
+                        <p class="cert-description">Optimizing deep transformer prompting, structuring contextual
+                            prompts, and building LLM vector pipelines.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🧠</span>
+                        <h3>Machine Learning Specialization</h3>
+                        <p class="cert-issuer">Coursera - Andrew Ng</p>
+                        <p class="cert-description">In-depth statistical models covering cost regressions, logical
+                            categorizations, vector splits, and unsupervised clustering algorithms.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🧠</span>
+                        <h3>Deep Learning Specialization</h3>
+                        <p class="cert-issuer">Coursera - Andrew Ng</p>
+                        <p class="cert-description">Configuring feed-forward neural layers, recurrent sequence models,
+                            CNNs, regularization loops, and tuning hyper-variables.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🖼️</span>
+                        <h3>Computer Vision with OpenCV</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-description">Executing pixel arrays, threshold manipulations, image filters,
+                            contour groupings, and training custom object detectors.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🔍</span>
+                        <h3>Natural Language Processing</h3>
+                        <p class="cert-issuer">Fast.ai</p>
+                        <p class="cert-description">Processing token sets, word vector models, classification
+                            embeddings, and mounting text classifiers.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🗄️</span>
+                        <h3>SQL & Database Design</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-description">Orchestrating index architectures, compiling relational joins,
+                            designing entity splits, and scaling queries.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal-item">
+                        <span class="cert-icon">🚀</span>
+                        <h3>FastAPI Web Development</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-description">Developing high-speed async APIs in FastAPI, setting schema
+                            validators, securing JWT, and routing database dependencies.</p>
+                        <div class="cert-meta">
+                            <span class="cert-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Deck Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2 class="section-title reveal-item">Professional Resume</h2>
+                <div class="resume-content reveal-item">
+                    <div class="resume-preview">
+                        <div class="resume-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                                <path
+                                    d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z" />
+                            </svg>
+                        </div>
+                        <h3>Harshit Waldia</h3>
+                        <p class="resume-subtitle">AI & Machine Learning Engineer</p>
+                        <p class="resume-description">
+                            Download my comprehensive CV file mapping academic achievements, research publications, tech
+                            stack scores, and engineering experience.
+                        </p>
+                        <div class="resume-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🎓</span>
+                                <span>B.Tech in AI & ML</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">💼</span>
+                                <span>Internship Roles</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🏅</span>
+                                <span>8+ Credentials</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🚀</span>
+                                <span>15+ Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="assets/Resume_Harshit_Waldia%20(1).pdf" download class="btn btn-primary btn-download">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                            </svg>
+                            <span>Download PDF Resume</span>
+                        </a>
+                        <a href="assets/Resume_Harshit_Waldia%20(1).pdf" target="_blank"
+                            class="btn btn-outline btn-download">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                            </svg>
+                            <span>View Resume Online</span>
                         </a>
                     </div>
                 </div>
-
-                <!-- High-End Glassmorphic Contact Form -->
-                <form class="contact-form reveal-item" id="contactForm" method="POST">
-                    <div class="form-group">
-                        <label for="name">Identifier (Name)</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter name or agency...">
-                        <span class="form-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Connection Route (Email)</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter communication mail...">
-                        <span class="form-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Transmission Data (Message)</label>
-                        <textarea rows="5" id="message" name="message" required placeholder="Enter pipeline specifications..."></textarea>
-                        <span class="form-error"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Transmit Message</button>
-                </form>
             </div>
+        </section>
+
+        <!-- Interactive Get In Touch Terminal Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title reveal-item">Establish Communications</h2>
+                <div class="contact-content">
+                    <div class="contact-info reveal-item">
+                        <p>
+                            Let’s collaborate on machine learning integrations, computer vision systems, or robust API
+                            backend designs. Open to research, consulting, and development roles.
+                        </p>
+
+                        <div class="contact-details-box">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">✉️</div>
+                                <div class="contact-detail-text">
+                                    <h4>Core Mailpoint</h4>
+                                    <p>harshitwaldia112@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">📍</div>
+                                <div class="contact-detail-text">
+                                    <h4>Geo Coordinates</h4>
+                                    <p>Uttarakhand, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/harshit-waldia" target="_blank" class="social-link">
+                                <span>Connect LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- High-End Glassmorphic Contact Form -->
+                    <form class="contact-form reveal-item" id="contactForm" method="POST">
+                        <div class="form-group">
+                            <label for="name">Identifier (Name)</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter name or agency...">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Connection Route (Email)</label>
+                            <input type="email" id="email" name="email" required
+                                placeholder="Enter communication mail...">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Transmission Data (Message)</label>
+                            <textarea rows="5" id="message" name="message" required
+                                placeholder="Enter pipeline specifications..."></textarea>
+                            <span class="form-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Transmit Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Harshit Waldia. AI Engine Online. All systems nominal.</p>
         </div>
-    </section>
-</main>
+    </footer>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Harshit Waldia. AI Engine Online. All systems nominal.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

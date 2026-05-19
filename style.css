@@ -1212,6 +1212,18 @@ section {
     transform: scale(1.15) rotate(5deg);
 }
 
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.5s var(--ease-elastic);
+}
+
+.project-card:hover .project-card-image {
+    transform: scale(1.08);
+}
+
 /* Grid particle mesh layer */
 .project-image::before {
     content: '';
@@ -1221,6 +1233,7 @@ section {
         radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 15px 15px;
     opacity: 0.45;
+    z-index: 2;
 }
 
 /* Linear scanning light overlay */
@@ -1231,6 +1244,7 @@ section {
     background: linear-gradient(to bottom, transparent 45%, rgba(6, 182, 212, 0.15) 50%, transparent 55%);
     animation: scannerLine 4s infinite linear;
     pointer-events: none;
+    z-index: 3;
 }
 
 @keyframes scannerLine {
